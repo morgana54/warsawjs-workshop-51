@@ -1,5 +1,7 @@
 const {createAdminUser, createGuestUser} = require("./create-user")
 
+// do Kacpra --> co znaczy to require, jak to łączy te dwa pliki
+
 test("Admin", () => {
   const user = createAdminUser()
 

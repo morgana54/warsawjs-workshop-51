@@ -7,7 +7,7 @@ const defaultPermissions = {
 function createUser(name){
   return {
     name,
-    permissions: defaultPermissions
+    permissions: {...defaultPermissions}
   }
 }
 
@@ -27,3 +27,33 @@ function createAdminUser(){
 
 module.exports.createGuestUser = createGuestUser
 module.exports.createAdminUser = createAdminUser
+
+
+// ________________________________________
+
+// const defaultPermissions = {
+//   canView: false,
+//   canEdit: false,
+//   canAdd: false
+// }
+// function createUser(name, permissions) {
+//   return {
+//       name,
+//       permissions: {
+//           ...defaultPermissions,
+//           ...permissions
+//       }
+//   }
+// }
+// function createGuestUser() {
+//   return createUser("Guest", {canView: true});
+// }
+// function createAdminUser() {
+//   return createUser("Admin", {
+//       canView: true,
+//       canEdit: true,
+//       canAdd: true
+//   });
+// }
+// module.exports.createGuestUser = createGuestUser
+// module.exports.createAdminUser = createAdminUser
